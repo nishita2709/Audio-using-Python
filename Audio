@@ -1,0 +1,23 @@
+#import library
+#gtts stands for
+#g=Google
+#t=Text
+#t=To
+#s=Speech
+#Means that this is the library which is used to convert Text into Speech.
+from gtts import  gTTS
+
+#open file
+file=open("main.txt")
+
+#read file
+txt=file.read()
+
+#setting language for audio
+language='en'
+
+#creating audio file of text
+audio=gTTS(text=txt,lang=language,slow=False)
+
+#saving audio file
+audio.save("myaudio.mp3")
